@@ -10,4 +10,5 @@ import UIKit
 
 struct Constants {
     static let baseFont = "HelveticaNeue-Bold"
+    static let barColor = UIColor(red:0.00, green:0.49, blue:0.76, alpha:1.0)
 }

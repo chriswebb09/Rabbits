@@ -9,9 +9,14 @@
 import Foundation
 
 struct testData {
+    var rabbits:[Rabbit] {
+        return [rabbitOne, rabbitTwo]
+    }
     let rabbitOne = Rabbit(name:"Buggs", age:"Two", image:nil)
     let rabbitTwo = Rabbit(name:"Buggs2", age:"Three", image:nil)
     
+    
+
 }
 
 

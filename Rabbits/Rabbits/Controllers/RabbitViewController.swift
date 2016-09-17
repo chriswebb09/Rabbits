@@ -14,7 +14,6 @@ class RabbitViewController: UIViewController {
         super.viewDidLoad()
         let rabbitView = RabbitView()
         view.addSubview(rabbitView)
-
         // Do any additional setup after loading the view.
     }
 

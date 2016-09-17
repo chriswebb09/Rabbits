@@ -12,16 +12,15 @@ class RabbitCell: UITableViewCell {
     
     static let cellIdentifier = "RabbitCell"
     
-    let rabbitNameLabel = UILabel()
-    let rabbitAgeLabel = UILabel()
+    var rabbitNameLabel = UILabel()
+    var rabbitAgeLabel = UILabel()
     var rabbitPicture = UIImageView()
 
-   
     override func layoutSubviews() {
         super.layoutSubviews()
         setupConstraints()
         setupCell()
-        backgroundColor = UIColor.blue
+        //backgroundColor = UIColor.blue
     }
     
     func setupCell() {
@@ -40,22 +39,25 @@ class RabbitCell: UITableViewCell {
         addSubview(rabbitPicture)
         
         rabbitNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        rabbitNameLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.25).isActive = true
-        rabbitNameLabel.widthAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.5).isActive = true
-        rabbitNameLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor, constant:0).isActive = true
-        rabbitNameLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: 0).isActive = true
+        rabbitNameLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.15).isActive = true
+        rabbitNameLabel.widthAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.1).isActive = true
+        //rabbitNameLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor, constant:0).isActive = true
+        //rabbitNameLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: 0).isActive = true
+        rabbitNameLabel.clipsToBounds = true
         
         rabbitAgeLabel.translatesAutoresizingMaskIntoConstraints = false
-        rabbitAgeLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.25).isActive = true
-        rabbitAgeLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.5).isActive = true
-        rabbitAgeLabel.leadingAnchor.constraint(equalTo: contentView.rightAnchor, constant: 0).isActive = true
-        rabbitAgeLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: 0).isActive = true
+        rabbitAgeLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.15).isActive = true
+        rabbitAgeLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.1).isActive = true
+        rabbitAgeLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: 0).isActive = true
+        //rabbitAgeLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: 0).isActive = true
+        rabbitAgeLabel.clipsToBounds = true
         
         rabbitPicture.translatesAutoresizingMaskIntoConstraints = false
-        rabbitPicture.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.5).isActive = true
-        rabbitPicture.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.25).isActive = true
-        rabbitPicture.trailingAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
-        rabbitPicture.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: 0).isActive = true
+        rabbitPicture.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.05).isActive = true
+        rabbitPicture.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.05).isActive = true
+        //rabbitPicture.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
+        //rabbitPicture.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: 0).isActive = true
+        //rabbitPicture.clipsToBounds = true
     }
 
 }
